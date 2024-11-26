@@ -1,0 +1,26 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function Header() {
+  return (
+    <header className="bg-blue-600 text-white">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/logo.png" // Make sure this path is correct
+            alt="Ride Go Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10"
+          />
+          <span className="text-xl font-bold">RIDE GO</span>
+        </Link>
+        
+        <div className="flex items-center space-x-4">
+          <Link href="/ride" className="hover:text-gray-200">Ride</Link>
+          <Link href="/package" className="hover:text-gray-200">Package</Link>
+        </div>
+      </div>
+    </header>
+  )
+}
